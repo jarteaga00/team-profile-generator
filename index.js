@@ -3,10 +3,10 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // team profiles 
-const Manager = require("./lib/manager");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
-const Employee = require("./lib/employee");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const Employee = require("./lib/Employee");
 
 //generate HTML 
 const generateHTML = require("./src/generateHTML");
@@ -85,7 +85,7 @@ const addEmployee = () => {
         }
     ])
     .then (employeeInput => {
-        let {name, ID, email, role, gthub, chool, oneMore} = employeeInput;
+        let {name, ID, email, role, github, school, oneMore} = employeeInput;
         let employee;
 
         if (role === "Engineer") {
